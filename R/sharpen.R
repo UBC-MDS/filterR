@@ -21,7 +21,8 @@
 
 
 sharpen <- function(input_path) {
-  
+  # exception handeling
+  assert("Please provide a string as input image path", is.character(input_path))
   
   input_img <- EBImage::readImage(input_path)
   
