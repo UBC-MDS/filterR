@@ -24,3 +24,6 @@ Imports:
     dplyr,
     rlang,
     png,
+    assertr,
+    knitr,
+    assertthat
