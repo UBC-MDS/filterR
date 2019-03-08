@@ -2,10 +2,8 @@ Package: filterizeR
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = Chao,
-           family =Wang,
-           role = c("cre"),
-           email = "374818352@qq.com")
+    c(person("Chao", "Wang",role = c("cre"),
+           email = "374818352@qq.com"))
 Description: This is a comprehensive image filtering package in R. 
 License: MIT
 Encoding: UTF-8
