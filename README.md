@@ -3,6 +3,8 @@
 ## filterizeR
 This is a comprehensive image filter package based in R.
 
+[![Build Status](https://travis-ci.org/UBC-MDS/filterizeR.svg?branch=master)](https://travis-ci.org/UBC-MDS/filterizeR)
+
 **Date:** 2019-03-03
 
 **License:** [MIT](https://opensource.org/licenses/MIT)
@@ -34,10 +36,11 @@ This mirror filter function will use convolution to convert the original image t
 ![insert flag image before and after](img/mirror_eff.png)
 
 ## Installation
-Please check whether you have installed `devtools` in R.
-To install `filterizeR` package, run the following line on your R console:
-`devtools::install_github("filterizeR")`
-`devtools::install_github("UBC-MDS/InstaR", build_vignettes = TRUE)`
+- Please check whether you have installed `devtools` in R.
+- Second, `install.packages("BiocManager")` so you can install the EBImage Dependencies `BiocManager::install("EBImage")`
+- To install `filterizeR` package, run the following line on your R console:
+`devtools::install_github("UBC-MDS/filterizeR",build_vignettes = TRUE)`
+
 
 
 ## Usage
@@ -47,33 +50,32 @@ library(filterizeR)
 
 1. `greenscale(input_path)`
  - Argument: `input_path`, path to the input image
- - Expected Output: The function save the filtered image to the same directory as the input image, and returns the output path
- - Example Usage:`greenscale("img/toy_img/greenscale_toy.png")`
+ - Expected Output: `"img/toy_img/greenscale_toy.png"`
+ - Example Usage:`greenscale("img/toy_img/gs_greenscale_toy.png")`
 
 
 2. `sharpen(input_path)`
  - Argument: `input_path`, path to the input image
- - Expected Output: The function save the filtered image to the same directory as the input image, and returns the output path
+ - Expected Output: `img/toy_img/sharpened_sharpen_toy.png`
  - Example Usage:`sharpen("img/toy_img/sharpen_toy.png")`
 
 
 3. `mirror(input_path)`
  - Argument: `input_path`, path to the input image
- - Expected Output: The function save the filtered image to the same directory as the input image, and returns the output path
+ - Expected Output: `img/toy_img/mirrored_mirror_toy.png`
  - Example Usage:`mirror("img/toy_img/mirror_toy.png")`
 
 
 ## Branch coverage test results
 Using 'covr' package, all our three functions achieve 100% branch overage. Please see results below.
-![Mirro_covr](doc/mirror_covr.png)
-![Sharpen_covr](doc/sharpen_covr.png)
-![Greenscale_covr](doc/greenscale_covr.png)
+![covr](doc/covr.png)
 
 ## Toy Dataset
 Out toy images are located in the 'toy_img' folder in the within the 'img' folder. You can find them [here](img/toy_img).
 
 
 ## Test results
+![test results](doc/zero_test_error.png)
 
 ## Pack Dependencies:
 - testthat

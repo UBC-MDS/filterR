@@ -20,7 +20,7 @@ Imports:
     lattice,
     magrittr,
     dplyr,
-    BiocManager,
     rlang,
     png,
     assertr
+
