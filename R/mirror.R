@@ -23,6 +23,12 @@
 
 mirror <- function(input_path) {
   
+  input_img <- tryCatch({
+    imager::load.image(input_path)
+  }, error = function(e) {
+    stop("Please enter valid file path")
+  })
+  
   input_img <- imager::load.image(input_path)
   output_img <- input_img
   dim <- input_img %>% dim
